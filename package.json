@@ -1,0 +1,44 @@
+{
+  "name": "event-planner",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@react-hooks-library/core": "^0.5.1",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@uploadthing/react": "^5.5.0",
+    "antd": "^5.8.4",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "cookies-next": "^4.0.0",
+    "debounce": "^1.2.1",
+    "eslint-config-next": "^13.4.16",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "moment": "^2.29.4",
+    "mongodb": "^5.7.0",
+    "next": "^13.4.16",
+    "next-auth": "^4.23.1",
+    "notistack": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-intersection-observer": "^9.5.2",
+    "react-loader-spinner": "^5.3.4",
+    "react-redux": "^8.1.2",
+    "uploadthing": "^5.5.0",
+    "zod": "^3.22.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/debounce": "^1.2.1",
+    "@types/node": "20.4.2",
+    "@types/react": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "typescript": "^5.1.6"
+  }
+}
