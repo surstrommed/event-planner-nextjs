@@ -1,8 +1,6 @@
 "use client";
 
 import Button from "@components/ui/Button/Button";
-import { useAppSelector } from "hooks/redux";
-import { getTheme } from "store/selectors/theme";
 
 const Error = ({ error, reset }: { error: Error; reset: () => void }) => {
   return (
