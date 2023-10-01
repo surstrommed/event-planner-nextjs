@@ -5,9 +5,9 @@ const options = {};
 
 if (!URI) throw new Error("Please check your MongoDB connection!");
 
-let client = new MongoClient(URI, options);
+const client = new MongoClient(URI, options);
 let clientPromise: Promise<MongoClient>;
-let globalWithMongo = global as typeof globalThis & {
+const globalWithMongo = global as typeof globalThis & {
   _mongoClientPromise: Promise<MongoClient>;
 };
 

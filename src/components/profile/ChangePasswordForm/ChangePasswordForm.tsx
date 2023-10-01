@@ -11,8 +11,6 @@ import { IChangePasswordForm } from "@models/profile";
 import { Form, Input } from "antd";
 import { styles } from ".";
 import { useSession } from "next-auth/react";
-import { useAppSelector } from "hooks/redux";
-import { getTheme } from "store/selectors/theme";
 
 type FormFields = {
   oldPassword: string;
@@ -22,7 +20,6 @@ type FormFields = {
 const ChangePasswordForm = ({ handleChangePassword }: IChangePasswordForm) => {
   const [form] = Form.useForm<FormFields>();
 
-  const theme = useAppSelector(getTheme);
   const { showSnackbar } = useSnackBar();
   const { data } = useSession();
   const email = data?.user?.email || "";

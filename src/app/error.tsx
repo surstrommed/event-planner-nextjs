@@ -5,8 +5,6 @@ import { useAppSelector } from "hooks/redux";
 import { getTheme } from "store/selectors/theme";
 
 const Error = ({ error, reset }: { error: Error; reset: () => void }) => {
-  const theme = useAppSelector(getTheme);
-
   return (
     <div
       style={{

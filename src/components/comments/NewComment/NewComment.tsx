@@ -5,7 +5,7 @@ import useSnackBar from "@components/snackbar/Snackbar";
 import { validateEmail } from "@consts/regexs";
 import { COMMENT_FAILED_CREATE } from "@consts/messages";
 import { INewComment } from "@models/comments";
-import { Row, Col, Card, Typography, Form } from "antd";
+import { Row, Col, Card, Form } from "antd";
 import { useSession } from "next-auth/react";
 import TextArea from "antd/es/input/TextArea";
 import { styles } from ".";

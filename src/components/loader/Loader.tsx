@@ -13,3 +13,5 @@ export const Loader = forwardRef<HTMLDivElement>((_, ref) => (
     />
   </div>
 ));
+
+Loader.displayName = "Loader";

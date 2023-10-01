@@ -3,10 +3,12 @@ import NewsletterRegistration from "@components/newsletter/NewsLetterRegistratio
 import { Metadata } from "next";
 import { getEvents } from "./requests";
 import ShowAllEventsButton from "@components/events/ShowAllEventsButton/ShowAllEventsButton";
-import { LAST_EVENTS_TITLE } from "@consts/common";
+import { LAST_EVENTS_TITLE, PROJECT_NAME } from "@consts/common";
 import { EVENTS_PER_PAGE } from "@consts/api";
 
 export const metadata: Metadata = {
+  title: PROJECT_NAME,
+  viewport: "initial-scale=1.0, width=device-width",
   description: "This is a home page",
 };
 

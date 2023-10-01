@@ -16,8 +16,8 @@ module.exports = (phase) => {
       ...generalConfig,
       env: {
         ENVIRONMENT: "development",
-        MONGODB_DATABASE: "event-planner:dev",
-        NEXTAUTH_URL: "http://localhost:3000",
+        MONGODB_DATABASE: process.env.DEV_MONGODB_DATABASE,
+        NEXTAUTH_URL: process.env.DEV_NEXTAUTH_URL,
       },
     };
   }
@@ -26,8 +26,8 @@ module.exports = (phase) => {
     ...generalConfig,
     env: {
       ENVIRONMENT: "production",
-      MONGODB_DATABASE: "event-planner",
-      NEXTAUTH_URL: "https://event-planner-api.vercel.app",
+      MONGODB_DATABASE: process.env.PROD_MONGODB_DATABASE,
+      NEXTAUTH_URL: process.env.PROD_NEXTAUTH_URL,
     },
   };
 };

@@ -13,14 +13,11 @@ import { myImageLoader } from "@/utils";
 import { useSession } from "next-auth/react";
 import { IMAGE_NOT_FOUND_ROUTE } from "@consts/common";
 import { Popconfirm } from "antd";
-import { useAppSelector } from "hooks/redux";
-import { getTheme } from "store/selectors/theme";
 
 const ChangeAvatarForm = ({ handleChangeAvatar }: IChangeAvatarForm) => {
   const { showSnackbar } = useSnackBar();
 
   const { data, update } = useSession();
-  const theme = useAppSelector(getTheme);
 
   const email = data?.user?.email || "";
   const currentAvatar = data?.user?.image || IMAGE_NOT_FOUND_ROUTE;

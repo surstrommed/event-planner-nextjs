@@ -32,6 +32,14 @@ const EventListInfinityScroll = (props: IEventListInfinityScroll) => {
   const { data } = useSession();
   const email = data?.user?.email || "";
 
+  useEffect(() => {
+    if (inView) {
+      (async () => {
+        await loadMoreEvents();
+      })();
+    }
+  }, [inView]);
+
   if (!events.length) {
     return <NoEventsBanner showAllEventsBtn={showAllEventsBtn} />;
   }
@@ -51,14 +59,6 @@ const EventListInfinityScroll = (props: IEventListInfinityScroll) => {
       setTotal(total);
     }
   };
-
-  useEffect(() => {
-    if (inView) {
-      (async () => {
-        await loadMoreEvents();
-      })();
-    }
-  }, [inView]);
 
   return (
     <Space style={styles.eventsContainer}>

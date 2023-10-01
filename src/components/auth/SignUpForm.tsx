@@ -2,12 +2,9 @@
 
 import useSnackBar from "@components/snackbar/Snackbar";
 import Button from "@components/ui/Button/Button";
-import { ROUTES } from "@consts/api";
 import { FAILED_SIGNUP } from "@consts/messages";
-import { http } from "@lib/utils/api";
 import { IAuthForm } from "@models/auth";
-import { IUser } from "@models/user";
-import { Row, Col, Card, Typography, Form, Input, ColProps } from "antd";
+import { Row, Col, Card, Form, Input, ColProps } from "antd";
 import { FormEvent } from "react";
 import { styles } from ".";
 import { useAppDispatch, useAppSelector } from "hooks/redux";

@@ -1,6 +1,5 @@
 "use server";
 
-import { authOptions } from "@lib/auth/authOptions";
 import { getEventsYears } from "@lib/mongo/events";
 import { allowCors } from "@lib/utils/api";
 import { NextResponse } from "next/server";

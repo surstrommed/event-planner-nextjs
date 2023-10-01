@@ -63,7 +63,7 @@ export async function getEventsByFilterAndSort(eventRequestBody: {
       limit,
     } = eventFilters;
 
-    const getSortObj = (es: ISortEventsRequestData) => {
+    const getSortObj = () => {
       const sortObj: Sort = {};
       if (eventSorts?.createDate) {
         if (eventSorts.createDate === "ASC") {
@@ -86,7 +86,7 @@ export async function getEventsByFilterAndSort(eventRequestBody: {
 
     const allEvents =
       eventSorts && Object.keys(eventSorts).length
-        ? await events.find().sort(getSortObj(eventSorts)).toArray()
+        ? await events.find().sort(getSortObj()).toArray()
         : await events.find().toArray();
 
     const filteredEvents = allEvents.filter((event) => {

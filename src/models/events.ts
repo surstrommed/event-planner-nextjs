@@ -147,7 +147,7 @@ const SortEventsRequestData = z.object({
 });
 export type ISortEventsRequestData = z.infer<typeof SortEventsRequestData>;
 
-export type IEventProvider = PropsWithChildren<{}>;
+export type IEventProvider = PropsWithChildren<object>;
 
 const EventsConfigurator = z.object({
   eventsYears: z.string().array(),

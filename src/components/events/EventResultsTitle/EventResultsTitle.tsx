@@ -3,7 +3,7 @@
 import { formattedEventDate } from "@lib/utils";
 import { IEventResultsTitle } from "@models/events";
 import ShowAllEventsButton from "../ShowAllEventsButton/ShowAllEventsButton";
-import { Space, Typography } from "antd";
+import { Space } from "antd";
 import { styles } from ".";
 import Title from "@components/ui/Title/Title";
 

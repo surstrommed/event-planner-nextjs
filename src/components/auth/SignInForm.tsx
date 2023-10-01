@@ -4,7 +4,7 @@ import useSnackBar from "@components/snackbar/Snackbar";
 import Button from "@components/ui/Button/Button";
 import { FAILED_SIGNIN } from "@consts/messages";
 import { IAuthForm } from "@models/auth";
-import { Form, Input, Row, Col, Card, Typography, ColProps } from "antd";
+import { Form, Input, Row, Col, Card, ColProps } from "antd";
 import { FormEvent } from "react";
 import { styles } from ".";
 import { useAppDispatch, useAppSelector } from "hooks/redux";
