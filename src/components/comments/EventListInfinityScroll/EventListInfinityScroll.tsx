@@ -66,7 +66,8 @@ const EventListInfinityScroll = (props: IEventListInfinityScroll) => {
       {events.map((event) => (
         <EventCard key={event.id} {...event} />
       ))}
-      {(events.length !== total || total === null) && <Loader ref={ref} />}
+      {((total === null && events.length >= limit) ||
+        (!!total && events.length >= total)) && <Loader ref={ref} />}
     </Space>
   );
 };

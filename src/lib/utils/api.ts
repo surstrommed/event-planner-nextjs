@@ -4,7 +4,8 @@ import axios, { AxiosRequestConfig } from "axios";
 import { WithId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
-const baseURL = process.env.NEXTAUTH_URL;
+const isProd = process.env.NODE_ENV === "production";
+const baseURL = isProd ? process.env.PROD_API_URL : process.env.DEV_API_URL;
 
 export const axiosInstance = axios.create({
   withCredentials: true,
